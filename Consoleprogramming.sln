@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "Except
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndList", "ArraysAndList\ArraysAndList.csproj", "{1A734F21-4A46-4CC5-B923-8A5135F6BBB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmMachine", "AtmMachine\AtmMachine.csproj", "{BA544F4D-BA54-451D-BAFE-1A2A789061E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1A734F21-4A46-4CC5-B923-8A5135F6BBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A734F21-4A46-4CC5-B923-8A5135F6BBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A734F21-4A46-4CC5-B923-8A5135F6BBB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA544F4D-BA54-451D-BAFE-1A2A789061E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA544F4D-BA54-451D-BAFE-1A2A789061E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA544F4D-BA54-451D-BAFE-1A2A789061E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA544F4D-BA54-451D-BAFE-1A2A789061E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
