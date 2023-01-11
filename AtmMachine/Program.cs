@@ -1,41 +1,58 @@
 ﻿int cardNum = 12345;
 int atmPin = 2255;
 int balance = 0;
-int amount = 0;
 int choice = 0;
-
-int DepositAmount(int amt)
+/*bool CheckCredentials()
 {
+    Console.Write("Enter 5 digit card number : ");
+    int num = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter 4 digit card number : ");
+    int pin = Convert.ToInt32(Console.ReadLine());
+}*/
+
+void DepositAmount()
+{
+    Console.Write("Enter amount : ");
+    int amount = Convert.ToInt32(Console.ReadLine());
     balance += amount;
-    Console.WriteLine("\nTransaction Successfully Completed");
-    return balance;
+    Console.WriteLine("Transaction Successfully Completed");
 }
 
-int WithdrawAmount(int amt)
+void WithdrawAmount()
 {
-    balance -= amt;
-    Console.WriteLine("\nTransaction Successfully Completed");
-    return balance;
+    Console.Write("Enter amount : ");
+    int amount = Convert.ToInt32(Console.ReadLine());
+    if (amount > balance)
+    {
+        Console.WriteLine("INSUFFICENT BALANCE");
+    }
+    else
+    {
+        balance -= amount;
+        Console.WriteLine("Transaction Successfully Completed");
+    }
 }
 
 void BalanceCheck()
 {
-    Console.Write($"\nAVAILABLE BALANCE : {balance}\n\n");
+    Console.WriteLine($"AVAILABLE BALANCE : {balance}");
 }
 
 void UserMenu()
 {
-    Console.WriteLine("1. Check Balance\n");
-    Console.WriteLine("2. Withdraw Cash\n");
-    Console.WriteLine("3. Deposit Cash\n");
-    Console.WriteLine("4. Quit\n");
-    Console.Write("\nEnter your choice: ");
+    Console.WriteLine("1. Check Balance");
+    Console.WriteLine("2. Withdraw Cash");
+    Console.WriteLine("3. Deposit Cash");
+    Console.WriteLine("4. Quit");
+    Console.Write("Enter your choice: ");
     choice = Convert.ToInt32(Console.ReadLine());
 }
 
 
 try
 {
+    // CheckCredentials();
     Console.Write("Enter 5 digit card number : ");
     int num = Convert.ToInt32(Console.ReadLine());
 
@@ -44,7 +61,7 @@ try
 
     if (num == cardNum && pin == atmPin)
     {
-        Console.WriteLine("\n\nWelcome to ATM Service\n");
+        Console.WriteLine("Welcome to ATM Service");
 
         while (!choice.Equals(4))
         {
@@ -57,30 +74,18 @@ try
                     BalanceCheck();
                     break;
                 case 2:
-                    Console.Write("Enter amount : ");
-                    amount = Convert.ToInt32(Console.ReadLine());
-                    if (amount > balance)
-                    {
-                        Console.WriteLine("\nINSUFFICENT BALANCE\n");
-                    }
-                    else
-                    {
-                        WithdrawAmount(amount);
-                        BalanceCheck();
-                        break;
-                    }
+                    WithdrawAmount();
+                    BalanceCheck();
                     break;
                 case 3:
-                    Console.Write("Enter amount : ");
-                    amount = Convert.ToInt32(Console.ReadLine());
-                    DepositAmount(amount);
+                    DepositAmount();
                     BalanceCheck();
                     break;
                 case 4:
-                    Console.Write("\n THANK FOR USING THE ATM");
+                    Console.Write("THANK FOR USING THE ATM");
                     break;
                 default:
-                    Console.WriteLine("Inalid Choice ");
+                    Console.WriteLine("Invalid Choice ");
                     break;
             }
         }
@@ -94,5 +99,5 @@ try
 
 catch (Exception ex)
 {
-    Console.WriteLine(ex.Message);
+    Console.WriteLine($"Something went wrong{ex.Message}");
 }
