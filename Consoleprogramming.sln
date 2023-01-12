@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraysAndList", "ArraysAndL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtmMachine", "AtmMachine\AtmMachine.csproj", "{BA544F4D-BA54-451D-BAFE-1A2A789061E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopConcept", "Class\OopConcept.csproj", "{6340460E-5A49-4C6E-A5AB-0D89173F3730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopConcept", "Class\OopConcept.csproj", "{6340460E-5A49-4C6E-A5AB-0D89173F3730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook", "AddressBook\AddressBook.csproj", "{5B00F70B-3D38-486B-9A9D-843C2104D630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressBook", "AddressBook\AddressBook.csproj", "{5B00F70B-3D38-486B-9A9D-843C2104D630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart", "ShoppingCart\ShoppingCart.csproj", "{34481694-5D83-4E71-A1A3-C553FFCA23D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{5B00F70B-3D38-486B-9A9D-843C2104D630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B00F70B-3D38-486B-9A9D-843C2104D630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B00F70B-3D38-486B-9A9D-843C2104D630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34481694-5D83-4E71-A1A3-C553FFCA23D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34481694-5D83-4E71-A1A3-C553FFCA23D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34481694-5D83-4E71-A1A3-C553FFCA23D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34481694-5D83-4E71-A1A3-C553FFCA23D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
