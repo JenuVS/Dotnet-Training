@@ -5,13 +5,6 @@ var cs = "Host=localhost;Username=postgres;Password=password;Database=testdb";
 using var con = new NpgsqlConnection(cs);
 con.Open();
 
-/*var sql = "SELECT version()";
-
-using var cmd = new NpgsqlCommand(sql, con);
-
-var version = cmd.ExecuteScalar().ToString();
-Console.WriteLine($"PostgreSQL version: {version}");*/
-
 using var cmd = new NpgsqlCommand();
 cmd.Connection = con;
 
@@ -51,7 +44,7 @@ Console.WriteLine("Table cars created");
 string sql = "SELECT * FROM cars";
 using var cmd1 = new NpgsqlCommand(sql, con);
 
-using NpgsqlDataReader rdr = cmd.ExecuteReader();
+using NpgsqlDataReader rdr = cmd1.ExecuteReader();
 Console.WriteLine($"{rdr.GetName(0),-4} {rdr.GetName(1),-10} {rdr.GetName(2),10}");
 
 while (rdr.Read())
